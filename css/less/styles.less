@@ -1,0 +1,64 @@
+@bgcolor: #ffffff;
+@textcolor: #282828;
+@grey: #e8e8e8;
+@blue: #134ecc;
+@red: #FF6B61;
+@light-blue: #4A90E2;
+@dark-blue: #000C27;
+@purple: #3C225F;
+
+.white{color:white;}
+.blue{color:@blue;}
+.light-blue{color:@light-blue}
+.red{color:@red;}
+.dark-blue{color:@dark-blue}
+.bg-purple { background-color:@purple};
+.bg-blue { background-color:@blue};
+.bg-red { background-color:@red};
+.bg-grey { background-color:@grey};
+.bg-white { background-color:white;};
+.bg-grad-blue-purp {background:linear-gradient(
+    -65deg
+    , @light-blue 0%
+    , @light-blue 50%
+    , @blue 50%
+    , @blue 100%
+  );
+  background-position: -300px;
+  background-size: 200% 100%;
+}
+.bg-grad-purp-blue {background:linear-gradient(
+    45deg
+    , rgba(231, 74, 66, 0.5) 0%
+    , rgba(231, 74, 66, 0.5) 50%
+    , rgba(73, 143, 226, 0.5) 50%
+    , rgba(73, 143, 226, 0.5) 100%
+  );
+}
+
+
+
+body {
+  background-color: @bgcolor;
+}
+
+
+
+.flex{
+  display:flex;
+}
+
+.hidden{
+  display: none;
+}
+
+@import "_elements.less";
+@import "_drawings.less";
+@import "_figures.less";
+@import "_type.less";
+@import "_structure.less";
+@import "_nav.less";
+
+.di {display: inline;}
+.space {border: none; margin: 4rem;}
+.ts{transition: all ease .23s;}

@@ -1,0 +1,60 @@
+.logo {
+  a {
+    text-decoration: none;
+    color: @blue;
+    font-weight: 500;
+    font-size: .3em;
+  }
+}
+
+.white {
+  a {
+    .white;
+  }
+}
+
+a.clean{text-decoration: none;}
+
+a.arrow:hover{
+  :last-child {
+    transform: translateX(1rem);
+    transform: rotateX(180deg);
+  }
+}
+
+.cta {
+  a h3{
+    border-left: 4px solid @light-blue;
+    padding-left: 2rem;
+  }
+}
+
+nav {
+  text-align: right;
+  a {
+    &:not(:last-of-type) {
+      margin-right: 2rem;
+    }
+    color: @blue;
+    transition: all ease .23s;
+    font-weight: 500;
+    transform: translateY(-10px);
+    &:hover {
+      color: @red;
+      box-shadow: inset 0 -.3em 0 0 rgba(255, 107, 97, 0.34);
+      outline: none;
+      border: none;
+      text-decoration: none;
+      font-style: italic;
+    }
+    &:active{
+      box-shadow: none;
+      text-decoration: none;
+      color: @light-blue;
+    }
+    &:visited{
+      font-weight: 300;
+      text-decoration: line-through;
+    }
+}
+}
