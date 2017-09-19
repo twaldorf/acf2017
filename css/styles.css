@@ -1,5 +1,5 @@
 .transparent {
-  opacity: .66;
+  opacity: .75;
 }
 .white {
   color: white;
@@ -44,8 +44,11 @@
   transition-duration: 1s;
 }
 .bg-nyc-1:hover {
-  background-position: center 15px, center 5px;
-  background-size: 70%;
+  background-position: center 50px, center 5px;
+  background-size: 50%;
+}
+.bg-nyc-1 h3 {
+  transform: translateX(-0.5rem);
 }
 .bg-grad-blue-purp {
   background: linear-gradient(-65deg, #4A90E2 0%, #4A90E2 50%, #134ecc 50%, #134ecc 100%);
@@ -83,6 +86,10 @@ body {
 .icon {
   max-height: 2rem;
   max-width: 3rem;
+}
+.col-3 iframe {
+  overflow: hidden;
+  position: absolute;
 }
 .play-button {
   text-decoration: none;
@@ -198,6 +205,7 @@ header {
 }
 .fix-top {
   position: fixed;
+  z-index: 1;
 }
 section {
   margin-bottom: 2rem;
