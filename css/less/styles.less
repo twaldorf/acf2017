@@ -1,0 +1,100 @@
+@bgcolor: #ffffff;
+@textcolor: #282828;
+@grey: #e8e8e8;
+@blue: #134ecc;
+@red: #FF6B61;
+@light-blue: #4A90E2;
+@dark-blue: #000C27;
+@purple: #3C225F;
+
+.transparent{opacity: .75;}
+.white{color:white;}
+.blue{color:@blue; fill:@blue;}
+.light-blue{color:@light-blue}
+.red{color:@red;}
+.dark-blue{color:@dark-blue}
+.bg-purple { background-color:@purple};
+.bg-blue { background-color:@blue};
+.bg-red { background-color:@red};
+.bg-grey { background-color:@grey};
+.bg-white { background-color:white;};
+
+// Backgrounds doc
+.bg-nyc-1 {
+  background-image: url('../img/nyc-bg-1.svg'), url('../img/nyc-bg-2.svg');
+  background-size: 40%;
+  background-position: center bottom, center;
+  background-repeat: no-repeat;
+  .ts; .long;
+  &:hover{
+    background-position: center 50px, center 5px;
+    background-size: 50%;
+  }
+  h3 {transform: translateX(-.5rem)}
+}
+
+.bg-grad-blue-purp {background:linear-gradient(
+    -65deg
+    , @light-blue 0%
+    , @light-blue 50%
+    , @blue 50%
+    , @blue 100%
+  );
+  background-position: -300px;
+  background-size: 200% 100%;
+}
+.bg-grad-purp-blue {background:linear-gradient(
+    45deg
+    , rgba(231, 74, 66, 0.5) 0%
+    , rgba(231, 74, 66, 0.5) 50%
+    , rgba(73, 143, 226, 0.5) 50%
+    , rgba(73, 143, 226, 0.5) 100%
+  );
+}
+
+body {
+  background-color: @bgcolor;
+  border-left: 2rem solid @blue;
+  border-right: 2rem solid @blue;
+}
+
+.flex{
+  display:flex;
+}
+
+.hidden{
+  display: none;
+}
+
+@import "_elements.less";
+@import "_drawings.less";
+@import "_figures.less";
+@import "_type.less";
+@import "_structure.less";
+@import "_nav.less";
+
+// Utilities doc
+.di {display: inline;}
+.space {border: none; margin: 4rem;}
+.ts{transition: all ease .43s; &.long {transition-duration: 1s}}
+.hidden{display: none;}
+
+//Weird spiky nasty shit that replaces ID specificity
+.margin-0-recursive *{
+  &:not(:first-child) {
+    margin: 0 !important;
+  }
+}
+
+// Transforms doc
+.x {transform: rotate(45deg);}
+.xr {transform: rotate(-45deg);}
+.v {transform: rotate(90deg);}
+
+// For animations doc
+.slider-down {
+   top:0;
+}
+.slider-up {
+   top:-200px;
+}

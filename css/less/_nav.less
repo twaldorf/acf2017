@@ -1,0 +1,79 @@
+.logo {
+  a {
+    text-decoration: none;
+    color: @blue;
+    font-weight: 500;
+    font-size: .3em;
+  }
+}
+
+.white {
+  a {
+    .white;
+  }
+}
+
+.clean{text-decoration: none;}
+
+a.arrow {
+  :last-child{
+    margin-left: 1rem;
+    vertical-align: middle;
+  }
+  &:hover{
+  :last-child {
+    transform: translateX(3rem) rotateX(175deg);
+  }
+}
+}
+
+.cta {
+  a {
+    .h3;
+    .red;
+    .clean;
+    // border-left: 4px solid @light-blue;
+    // padding-left: 2rem;
+    position: relative;
+    span {
+      &:hover {.a-hover;}
+      &:active {.a-active;}
+      &:visited {.a-visited;}
+    }
+
+  }
+}
+
+nav {
+  text-align: right;
+  a {
+    &:not(:last-of-type) {
+      margin-right: 2rem;
+    }
+    color: @blue;
+    transition: all ease .23s;
+    font-weight: 500;
+    transform: translateY(-10px);
+    &:hover {.a-hover;}
+    &:active {.a-active;}
+    &:visited {.a-visited;}
+  }
+}
+
+.a-hover {
+  color: @red;
+  box-shadow: inset 0 -.3em 0 0 rgba(255, 107, 97, 0.34);
+  outline: none;
+  border: none;
+  text-decoration: none;
+  font-style: italic;
+}
+.a-active {
+  box-shadow: none;
+  text-decoration: none;
+  color: @light-blue;
+}
+.a-visited {
+  font-weight: 300;
+  text-decoration: line-through;
+}
