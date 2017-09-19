@@ -7,6 +7,7 @@
 @dark-blue: #000C27;
 @purple: #3C225F;
 
+.transparent{opacity: .66;}
 .white{color:white;}
 .blue{color:@blue; fill:@blue;}
 .light-blue{color:@light-blue}
@@ -17,6 +18,20 @@
 .bg-red { background-color:@red};
 .bg-grey { background-color:@grey};
 .bg-white { background-color:white;};
+
+// Backgrounds doc
+.bg-nyc-1 {
+  background-image: url('../img/nyc-bg-1.svg'), url('../img/nyc-bg-2.svg');
+  background-size: 40%;
+  background-position: center bottom, center;
+  background-repeat: no-repeat;
+  .ts; .long;
+  &:hover{
+    background-position: center 15px, center 5px;
+    background-size: 70%;
+  }
+}
+
 .bg-grad-blue-purp {background:linear-gradient(
     -65deg
     , @light-blue 0%
@@ -57,11 +72,25 @@ body {
 @import "_structure.less";
 @import "_nav.less";
 
+// Utilities doc
 .di {display: inline;}
 .space {border: none; margin: 4rem;}
-.ts{transition: all ease .43s;}
+.ts{transition: all ease .43s; &.long {transition-duration: 1s}}
 .hidden{display: none;}
 
+//Weird spiky nasty shit that replaces ID specificity
+.margin-0-recursive *{
+  &:not(:first-child) {
+    margin: 0 !important;
+  }
+}
+
+// Transforms doc
+.x {transform: rotate(45deg);}
+.xr {transform: rotate(-45deg);}
+.v {transform: rotate(90deg);}
+
+// For animations doc
 .slider-down {
    top:0;
 }
