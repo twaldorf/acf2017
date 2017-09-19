@@ -4,17 +4,19 @@
     <meta charset="utf-8">
     <title>Aviation Community Foundation</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script rel="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <!-- <script rel="text/javascript" src="js/jquery-3.2.1.min.js"></script> -->
+    <script rel="text/javascript" src="js/affix.js"></script>
 
   </head>
   <body>
-    <div id="dev-notes" class="full dev bg-red white courier row">
+    <div id="dev-notes" class="hidden full dev bg-red white courier row">
       <h5>ACF2017 dev</h5>
       <h3>build #1</h3>
       <h3>15 Sep 17</h3>
       <p>Notes: no media, no externals, partial sitemap</p>
     </div>
-    <header class="row">
+    <div class="hidden" id="holder"></div>
+    <header id="header" class="row bg-white ts">
       <div class="logo">
         <a href="#">
           <h1>Aviation Community Foundation</h1>
@@ -79,22 +81,25 @@ community ready</h3>
         </div>
       </section>
       <section id="cta" class="full cta">
-        <a href="#" class="arrow red clean">
-          <h3 class="ts">Find out how you can be part of our flight plan <span class="light-blue">-></span></h3>
+        <a href="#" class="arrow ts"><span>Find out how you can be part of our flight plan</span><img src="./img/icons/airplane.svg" alt="" class="blue icon ts">
         </a>
       </section>
-      <section id="nyc-summary">
+      <section id="nyc-summary" class="full border-red ">
         <h4>Retrospective</h4>
-        <h3>Jet Blue + Airlines 4 America</h3>
-        <h2>NYC 2017</h2>
+        <span>ACF + Jet Blue + Airlines 4 America</span>
+        <h2 class="red border-offset"><span>Student Aviation Expedition</span>NYC 2017</h2>
       </section>
       <section id="testimonials" class="full">
         <h4>Students Say</h4>
         <h3>"ACF changed my life"</h3>
       </section>
       <section id="team-summary" class="full">
-        <h2>Team</h2>
-        <p>Our team is super cool. Learn more about them.</p>
+        <h2>Partners</h2>
+        <p>We partner with top aviation education programs across the country and are actively expanding our network.</p>
+        <figure>
+          map
+        </figure>
+        <p>Combined, the Aviation Community Foundation has impacted thousands of students across the U.S.</p>
       </section>
     </main>
     <hr class="line dark-grey pb0">

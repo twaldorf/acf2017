@@ -7,6 +7,11 @@
   &.dark-grey{border-color:rgb(184, 184, 184)}
 }
 
+.icon{
+  max-height: 2rem;
+  max-width: 3rem;
+}
+
 .play-button{
   text-decoration: none;
   font-weight: 900;
@@ -24,4 +29,12 @@
   border-radius: 50%;
   width: 1.8rem;
   height: 1.8rem;
+}
+
+.border-offset:after{
+  content:'';
+  position: absolute;
+  border:1px solid @blue;
+  width: 400px;
+  height: 100px;
 }
