@@ -50,6 +50,10 @@
 .bg-nyc-1 h3 {
   transform: translateX(-0.5rem);
 }
+.bg-blue-transparent {
+  background-color: #134ecc;
+  background-blend-mode: color;
+}
 .bg-grad-blue-purp {
   background: linear-gradient(-65deg, #4A90E2 0%, #4A90E2 50%, #134ecc 50%, #134ecc 100%);
   background-position: -300px;
@@ -118,6 +122,27 @@ body {
   border: 1px solid #134ecc;
   width: 400px;
   height: 100px;
+}
+.main-content-top {
+  z-index: 2;
+}
+.main-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  overflow-y: hidden;
+  z-index: -1;
+}
+.main-video:before {
+  content: '';
+  position: absolute;
+  background: rgba(30, 54, 125, 0.5);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 body {
   font-family: Museo Sans, 'sans-serif';
@@ -201,7 +226,15 @@ body {
   margin: 0;
 }
 header {
-  padding: 2rem 12.5%;
+  padding: 1rem 12.5%;
+  display: flex;
+  justify-content: space-between;
+}
+#head {
+  position: relative;
+}
+.main-content-top {
+  z-index: 2;
 }
 .fix-top {
   position: fixed;
@@ -329,6 +362,9 @@ nav a:visited {
 .di {
   display: inline;
 }
+.dib {
+  display: inline-block;
+}
 .space {
   border: none;
   margin: 4rem;
@@ -341,6 +377,9 @@ nav a:visited {
 }
 .hidden {
   display: none;
+}
+.z2 {
+  z-index: 2;
 }
 .margin-0-recursive *:not(:first-child) {
   margin: 0 !important;

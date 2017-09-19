@@ -33,6 +33,11 @@
   h3 {transform: translateX(-.5rem)}
 }
 
+.bg-blue-transparent {
+  background-color:@blue;
+  background-blend-mode: color;
+}
+
 .bg-grad-blue-purp {background:linear-gradient(
     -65deg
     , @light-blue 0%
@@ -75,11 +80,13 @@ body {
 
 // Utilities doc
 .di {display: inline;}
+.dib {display: inline-block;}
 .space {border: none; margin: 4rem;}
 .ts{transition: all ease .43s; &.long {transition-duration: 1s}}
 .hidden{display: none;}
+.z2{z-index: 2;}
 
-//Weird spiky nasty shit that replaces ID specificity
+//Weird spiky nasty rules that replace ID specificity
 .margin-0-recursive *{
   &:not(:first-child) {
     margin: 0 !important;
