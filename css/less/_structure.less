@@ -7,7 +7,9 @@ header {
   padding: 1rem 12.5%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   .logo {
+    img {width: 8rem;}
   }
 }
 
@@ -25,7 +27,6 @@ header {
 }
 
 section {
-  margin-bottom: 2rem;
 }
 
 .full {
@@ -50,6 +51,18 @@ section {
 .col-2 {
   width: 40%;
   padding: 1rem 2rem;
+}
+
+.auto-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  li {
+    min-width:40%;
+    padding: 1rem 2rem;
+  }
 }
 
 .flex-between{

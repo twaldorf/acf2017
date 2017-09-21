@@ -3,6 +3,7 @@
 }
 .white {
   color: white;
+  fill: white;
 }
 .blue {
   color: #134ecc;
@@ -62,11 +63,6 @@
 .bg-grad-purp-blue {
   background: linear-gradient(45deg, rgba(231, 74, 66, 0.5) 0%, rgba(231, 74, 66, 0.5) 50%, rgba(73, 143, 226, 0.5) 50%, rgba(73, 143, 226, 0.5) 100%);
 }
-body {
-  background-color: #ffffff;
-  border-left: 2rem solid #134ecc;
-  border-right: 2rem solid #134ecc;
-}
 .flex {
   display: flex;
 }
@@ -116,23 +112,15 @@ body {
   width: 1.8rem;
   height: 1.8rem;
 }
-.border-offset:after {
-  content: '';
-  position: absolute;
-  border: 1px solid #134ecc;
-  width: 400px;
-  height: 100px;
-}
 .main-content-top {
   z-index: 2;
+  margin-top: 2rem;
+  margin-bottom: 0;
 }
 .main-video {
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
   overflow: hidden;
-  overflow-y: hidden;
   z-index: -1;
 }
 .main-video:before {
@@ -143,6 +131,16 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
+}
+.map {
+  background-image: url('../img/map-2.svg');
+  background-size: 80%;
+  background-position: center bottom, center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.map img {
+  max-width: 80%;
 }
 body {
   font-family: Museo Sans, 'sans-serif';
@@ -229,6 +227,10 @@ header {
   padding: 1rem 12.5%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+header .logo img {
+  width: 8rem;
 }
 #head {
   position: relative;
@@ -239,9 +241,6 @@ header {
 .fix-top {
   position: fixed;
   z-index: 1;
-}
-section {
-  margin-bottom: 2rem;
 }
 .full {
   padding: 2rem 12.5% 6rem;
@@ -263,6 +262,16 @@ section {
   width: 40%;
   padding: 1rem 2rem;
 }
+.auto-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.auto-grid li {
+  min-width: 40%;
+  padding: 1rem 2rem;
+}
 .flex-between {
   display: flex;
   justify-content: space-between;
@@ -279,6 +288,7 @@ section {
 }
 .white a {
   color: white;
+  fill: white;
 }
 .clean {
   text-decoration: none;
@@ -380,6 +390,12 @@ nav a:visited {
 }
 .z2 {
   z-index: 2;
+}
+.oh {
+  overflow: hidden;
+}
+.tc {
+  text-align: center;
 }
 .margin-0-recursive *:not(:first-child) {
   margin: 0 !important;

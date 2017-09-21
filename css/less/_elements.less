@@ -11,9 +11,6 @@
 .icon{
   max-height: 2rem;
   max-width: 3rem;
-  &.logo {
-
-  }
 }
 
 .col-3 {
@@ -42,26 +39,19 @@
   height: 1.8rem;
 }
 
-.border-offset:after{
-  content:'';
-  position: absolute;
-  border:1px solid @blue;
-  width: 400px;
-  height: 100px;
-}
-
 .main-content-top {
   z-index: 2;
+  margin-top:2rem;
+  margin-bottom: 0;
 }
 
 .main-video {
   position: absolute;
   top: 0;
-  left:0;
-  right: 0;
   overflow: hidden;
-  overflow-y: hidden;
   z-index: -1;
+  video {
+  }
 }
 
 .main-video:before{
@@ -72,4 +62,15 @@
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+.map {
+  background-image: url('../img/map-2.svg');
+  background-size: 80%;
+  background-position: center bottom, center;
+  background-repeat: no-repeat;
+  .tc;
+  img {
+    max-width: 80%;
+  }
 }
