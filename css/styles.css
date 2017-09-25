@@ -118,10 +118,15 @@
   margin-bottom: 0;
 }
 .main-video {
+  width: 100%;
   position: absolute;
   top: 0;
   overflow: hidden;
   z-index: -1;
+}
+.main-video video {
+  object-fit: cover;
+  width: 100%;
 }
 .main-video:before {
   content: '';
