@@ -35,6 +35,32 @@
   h3 {transform: translateX(-.5rem)}
 }
 
+.bg-img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  &.img-blue {
+    background-image: url('../img/photography/thumbnail-blue.png');
+  }
+  &.img-red {
+    background-image: url('../img/photography/thumbnail-red.png');
+  }
+  &.img-purple {
+    background-image: url('../img/photography/thumbnail-purple.png');
+  }
+  // ::before{
+  //   content: '';
+  //   position: absolute;
+  //   background: rgba(62, 62, 62, 0.5);
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   z-index: -1;
+  // }
+}
+
 .bg-blue-transparent {
   background-color:@blue;
   background-blend-mode: color;

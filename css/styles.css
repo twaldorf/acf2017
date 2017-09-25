@@ -51,6 +51,21 @@
 .bg-nyc-1 h3 {
   transform: translateX(-0.5rem);
 }
+.bg-img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.bg-img.img-blue {
+  background-image: url('../img/photography/thumbnail-blue.png');
+}
+.bg-img.img-red {
+  background-image: url('../img/photography/thumbnail-red.png');
+}
+.bg-img.img-purple {
+  background-image: url('../img/photography/thumbnail-purple.png');
+}
 .bg-blue-transparent {
   background-color: #134ecc;
   background-blend-mode: color;
@@ -94,7 +109,6 @@
 .play-button {
   text-decoration: none;
   font-weight: 900;
-  margin-left: .6rem;
   transition: all ease .43s;
 }
 .play-button.long {
@@ -248,7 +262,7 @@ header .logo img {
   z-index: 1;
 }
 .full {
-  padding: 2rem 12.5% 6rem;
+  padding: 2rem 8.5% 6rem;
 }
 .row {
   display: flex;
@@ -262,6 +276,18 @@ header .logo img {
 }
 .col-3.media {
   height: 400px;
+}
+.col-3.media .play-button span {
+  margin-left: 1rem;
+}
+.col-3.media h3 {
+  font-size: 2.827em;
+  font-weight: 300;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.col-3.media p {
+  margin-top: .15rem;
 }
 .col-2 {
   width: 40%;
@@ -299,7 +325,7 @@ header .logo img {
   text-decoration: none;
 }
 a.arrow :last-child {
-  margin-left: 1rem;
+  margin-left: .5rem;
   vertical-align: middle;
 }
 a.arrow:hover :last-child {
