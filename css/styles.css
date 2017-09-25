@@ -161,6 +161,11 @@
 .map img {
   max-width: 80%;
 }
+.wedge {
+  height: 30px;
+  width: 30px;
+  transform: translateX(2rem) rotate(45deg);
+}
 body {
   font-family: Museo Sans, 'sans-serif';
   font-weight: 500;
@@ -189,7 +194,8 @@ h4 {
   line-height: 1.2;
 }
 :first-of-type h2 {
-  margin: 1.414em 0 .5em 0;
+  margin: 1.414em 0 1em 0;
+  border-bottom: 5px solid #FF6B61;
 }
 .col-3 h3 {
   margin-bottom: 0;
@@ -205,7 +211,7 @@ h1,
 h2,
 .h2 {
   font-size: 2.827em;
-  font-weight: 300;
+  font-weight: 500;
 }
 h3,
 .h3 {
@@ -282,7 +288,6 @@ header .logo img {
 }
 .col-3.media h3 {
   font-size: 2.827em;
-  font-weight: 300;
   font-weight: 500;
   margin-bottom: 0;
 }
@@ -301,6 +306,9 @@ header .logo img {
 }
 .auto-grid li {
   min-width: 40%;
+  padding: 1rem 2rem;
+}
+.auto-grid li div.quote {
   padding: 1rem 2rem;
 }
 .flex-between {
@@ -427,6 +435,9 @@ nav a:visited {
 }
 .tc {
   text-align: center;
+}
+.fl {
+  float: left;
 }
 .margin-0-recursive *:not(:first-child) {
   margin: 0 !important;
