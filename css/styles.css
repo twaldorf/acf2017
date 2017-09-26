@@ -169,6 +169,27 @@
   width: 30px;
   transform: translateX(2rem) rotate(45deg);
 }
+.program-label {
+  width: 8rem;
+  height: 4rem;
+  background-color: #4A90E2;
+  position: absolute;
+  font-size: 1rem;
+}
+.program-label h5,
+.program-label p {
+  margin: 0;
+}
+.program-label::after {
+  content: '';
+  border: 1px solid white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: .3rem;
+  top: .3rem;
+  z-index: 0;
+}
 body {
   font-family: Museo Sans, 'sans-serif';
   font-weight: 500;
@@ -314,14 +335,30 @@ header .logo img {
   justify-content: space-between;
 }
 .auto-grid li {
-  min-width: 40%;
-  padding: 1rem 2rem;
+  min-width: 15rem;
+  flex-basis: 32%;
 }
 .auto-grid li div.quote {
   padding: 1rem 2rem;
+  position: relative;
 }
-.auto-grid li :before {
+.auto-grid li .quote:before {
   content: '"';
+  font-size: 5rem;
+  position: absolute;
+  font-color: white;
+  top: 0rem;
+  left: 1rem;
+  opacity: .4;
+}
+.auto-grid li .quote:after {
+  content: '"';
+  font-size: 3rem;
+  position: absolute;
+  font-color: white;
+  bottom: -1rem;
+  right: 2rem;
+  opacity: .4;
 }
 .flex-between {
   display: flex;
