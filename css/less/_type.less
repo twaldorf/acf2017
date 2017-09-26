@@ -19,11 +19,9 @@ h1, h2, h3, h4 {
   line-height: 1.2;
 }
 
-&:first-of-type {
-  h2{
-    margin: 1.414em 0 1em 0;
-    border-bottom: 5px solid @red;
-  }
+h2:first-of-type:not(.clean) {
+  margin: 1.414em 0 1em 0;
+  border-bottom: 5px solid @red;
 }
 
 .col-3{
@@ -42,6 +40,15 @@ figure {
   font-size: 1.999em;
 }
 small, .font-small {font-size: 0.707em;}
+
+li {
+  h4 {
+    margin: 2rem 0 0 3rem;
+  }
+  h5{
+    margin: .3rem 0 0 3rem;
+  }
+}
 
 // UTILITY
 .bold {font-weight: 500;}

@@ -51,6 +51,9 @@
 .bg-nyc-1 h3 {
   transform: translateX(-0.5rem);
 }
+.bg-nyc-1 h2 {
+  border-bottom: none;
+}
 .bg-img {
   background-repeat: no-repeat;
   background-position: center;
@@ -193,7 +196,7 @@ h4 {
   font-weight: inherit;
   line-height: 1.2;
 }
-:first-of-type h2 {
+h2:first-of-type:not(.clean) {
   margin: 1.414em 0 1em 0;
   border-bottom: 5px solid #FF6B61;
 }
@@ -227,6 +230,12 @@ figure {
 small,
 .font-small {
   font-size: 0.707em;
+}
+li h4 {
+  margin: 2rem 0 0 3rem;
+}
+li h5 {
+  margin: .3rem 0 0 3rem;
 }
 .bold {
   font-weight: 500;
@@ -310,6 +319,9 @@ header .logo img {
 }
 .auto-grid li div.quote {
   padding: 1rem 2rem;
+}
+.auto-grid li :before {
+  content: '"';
 }
 .flex-between {
   display: flex;
