@@ -159,10 +159,22 @@
   background-size: 80%;
   background-position: center bottom, center;
   background-repeat: no-repeat;
+  position: relative;
   text-align: center;
 }
 .map img {
   max-width: 80%;
+}
+.map :nth-child(1) {
+  bottom: 18%;
+  right: 50%;
+}
+.map :nth-child(2) {
+  bottom: 24%;
+}
+.map :nth-child(3) {
+  top: 36%;
+  right: 10%;
 }
 .wedge {
   height: 30px;
@@ -173,8 +185,10 @@
   width: 8rem;
   height: 4rem;
   background-color: #4A90E2;
+  opacity: .9;
   position: absolute;
   font-size: 1rem;
+  padding-top: 1.2rem;
 }
 .program-label h5,
 .program-label p {
@@ -186,8 +200,8 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  left: .3rem;
-  top: .3rem;
+  left: .1rem;
+  top: .1rem;
   z-index: 0;
 }
 body {
@@ -367,6 +381,9 @@ header .logo img {
 .pb0 {
   margin-bottom: 0;
   padding-bottom: 0;
+}
+footer {
+  background-color: white;
 }
 .logo a {
   text-decoration: none;
