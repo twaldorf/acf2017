@@ -14,10 +14,10 @@
 .red{color:@red;}
 .dark-blue{color:@dark-blue}
 .bg-purple { background-color:@purple};
-.bg-blue { background-color:@blue};
 .bg-red { background-color:@red};
 .bg-grey { background-color:@grey};
 .bg-white { background-color:white;};
+.bg-blue { background-color:@blue};
 
 // main {box-shadow: 0px 0px 20px -4px @dark-blue;}
 
@@ -50,6 +50,9 @@
   &.img-purple {
     background-image: url('../img/photography/thumbnail-purple.png');
   }
+  &.img-team {
+    background-image: url('../img/photography/team.jpg');
+  }
   // ::before{
   //   content: '';
   //   position: absolute;
@@ -65,6 +68,11 @@
 .bg-blue-transparent {
   background-color:@blue;
   background-blend-mode: color;
+}
+
+.bg-blue-soft {
+  background-color:@blue;
+  background-blend-mode:overlay;
 }
 
 .bg-grad-blue-purp {background:linear-gradient(
@@ -117,6 +125,8 @@ main {
 .oh {overflow:hidden;}
 .tc {text-align: center;}
 .fl{float:left;}
+.bullets {list-style:square; padding-left: 1.1rem;}
+.mt{margin-top:2rem;}
 
 //Weird spiky nasty rules that replace ID specificity
 .margin-0-recursive *{
@@ -136,4 +146,11 @@ main {
 }
 .slider-up {
    top:-200px;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+.fade-in{
+  animation: fadein 1.2s;
 }
