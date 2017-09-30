@@ -33,6 +33,9 @@
 .bg-blue {
   background-color: #134ecc;
 }
+.bg-light-blue {
+  background-color: #4A90E2;
+}
 .bg-nyc-1 {
   background-image: url('../img/nyc-bg-1.svg'), url('../img/nyc-bg-2.svg');
   background-size: 40%;
@@ -72,13 +75,19 @@
 .bg-img.img-team {
   background-image: url('../img/photography/team.jpg');
 }
+.bg-img.img-sky {
+  background-image: url('../img/photography/sky.jpg');
+}
 .bg-blue-transparent {
   background-color: #134ecc;
   background-blend-mode: color;
 }
 .bg-blue-soft {
-  background-color: #134ecc;
+  background-color: #3C225F;
   background-blend-mode: overlay;
+}
+.bg-blue-semi {
+  background-color: rgba(19, 78, 204, 0.38);
 }
 .bg-grad-blue-purp {
   background: linear-gradient(-65deg, #4A90E2 0%, #4A90E2 50%, #134ecc 50%, #134ecc 100%);
@@ -115,6 +124,30 @@
 .col-3 iframe {
   overflow: hidden;
   position: absolute;
+}
+.panels {
+  padding: 0 8.5%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.panels div.white {
+  padding: 0 4rem 4rem 4rem;
+}
+.panels .panel {
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+}
+.panels .panel.copy {
+  padding: 0 4rem 2rem 4rem;
+}
+.panels .panel.img {
+  overflow: hidden;
+  max-height: 400px;
+}
+.panels .panel.img img {
+  width: 150%;
 }
 .play-button {
   text-decoration: none;
@@ -209,10 +242,19 @@
   bottom: -10%;
   right: 20%;
 }
+#team .auto-grid img {
+  max-width: 8em;
+  margin-bottom: 1em;
+  border-radius: 50%;
+}
 .wedge {
   height: 30px;
   width: 30px;
   transform: translateX(2rem) rotate(45deg);
+}
+.vig-blue {
+  max-width: 100%;
+  box-shadow: 0 0 200px #4A90E2 inset;
 }
 .program-label {
   width: 8rem;
@@ -244,7 +286,7 @@ body {
   font-family: Museo Sans, 'sans-serif';
   font-weight: 500;
   line-height: 1.45;
-  color: #282828;
+  color: #000C27;
 }
 .courier {
   font-family: serif;
@@ -268,6 +310,14 @@ h5 {
   font-weight: inherit;
   line-height: 1.2;
 }
+.compact h1,
+.compact h2,
+.compact h3,
+.compact h4,
+.compact h5 {
+  margin: 0;
+  margin-top: .4rem;
+}
 h2:first-of-type:not(.clean) {
   margin: 1.414em 0 1em 0;
   border-bottom: 5px solid #FF6B61;
@@ -281,7 +331,7 @@ h2:first-of-type:not(.clean) {
 h1,
 .h1 {
   margin-top: 0;
-  font-size: 3.998em;
+  font-size: 3.998rem;
 }
 h2,
 .h2 {
@@ -309,14 +359,18 @@ small,
 .font-small {
   font-size: 0.707em;
 }
+.font-large {
+  font-size: 1.414em;
+}
 #testimonials li h4 {
   margin: 2rem 0 0 3rem;
 }
 #testimonials li h5 {
   margin: .3rem 0 0 3rem;
 }
-#why h1 {
-  margin-top: 4rem;
+#why h1,
+#team h1 {
+  margin-top: 1.114em;
 }
 .redline {
   margin: 1.414em 0 .5em 0;
@@ -387,51 +441,6 @@ header .logo img {
 section {
   animation: fadein 1.2s;
 }
-section.panels {
-  padding: 2rem 8.5% 6rem;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-section.panels div.white {
-  padding: 0 4rem 4rem 4rem;
-}
-section.panels.thin {
-  padding-bottom: 2rem;
-}
-section.panels .panel {
-  position: relative;
-  width: 50%;
-  box-sizing: border-box;
-}
-section.panels .panel:nth-child(even) {
-  padding: 0 4rem;
-  background-color: #e8e8e8;
-}
-section.panels .panel:nth-child(odd) {
-  overflow: hidden;
-  max-height: 500px;
-}
-section.panels .panel:nth-child(odd) img {
-  width: 150%;
-}
-section.panels .panel.img {
-  overflow: hidden;
-  max-height: 500px;
-  padding: 0;
-}
-section.panels .panel.img img {
-  width: 150%;
-}
-.panel:nth-child(odd)::after {
-  content: '';
-  position: absolute;
-  background: rgba(255, 107, 97, 0.36);
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
 .panel.img::after {
   content: '';
   position: absolute;
@@ -440,6 +449,7 @@ section.panels .panel.img img {
   right: 0;
   bottom: 0;
   left: 0;
+  overflow: hidden;
 }
 .full {
   padding: 2rem 8.5% 6rem;
@@ -481,6 +491,9 @@ section.panels .panel.img img {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.auto-grid.start {
+  justify-content: flex-start;
+}
 .auto-grid li {
   min-width: 15rem;
   flex-basis: 32%;
@@ -507,11 +520,18 @@ section.panels .panel.img img {
   right: 2rem;
   opacity: .4;
 }
+.auto-grid.secondary li {
+  margin-top: 4em;
+}
 .grid ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  justify-content: flex-start;
+}
+.grid ul.start {
+  justify-content: flex-start;
 }
 .grid ul li {
   min-width: 15rem;
@@ -539,6 +559,28 @@ section.panels .panel.img img {
   right: 2rem;
   opacity: .4;
 }
+.grid ul.secondary li {
+  margin-top: 4em;
+}
+.grid ul h1,
+.grid ul h2,
+.grid ul h3,
+.grid ul h4,
+.grid ul h5 {
+  margin: 0;
+  margin-top: .4rem;
+}
+.grid ul li {
+  background-color: #134ecc;
+  color: white;
+  fill: white;
+  padding: 1.414em;
+  margin-right: 1em;
+}
+.grid ul li a {
+  color: white;
+  fill: white;
+}
 .grid h2 {
   margin: 1.414em 0 .5em 0;
   border-bottom: 5px solid #FF6B61;
@@ -561,7 +603,13 @@ footer {
   background-color: white;
   display: flex;
   flex-direction: row;
-  padding: 0 12.%;
+  padding: 2rem 8.5% 6rem;
+  padding-bottom: 2rem;
+  color: #000C27;
+  font-size: 0.707em;
+}
+footer.thin {
+  padding-bottom: 2rem;
 }
 .logo a {
   text-decoration: none;
@@ -689,6 +737,9 @@ nav a:visited {
 }
 .mt {
   margin-top: 2rem;
+}
+.db {
+  display: block;
 }
 .margin-0-recursive *:not(:first-child) {
   margin: 0 !important;

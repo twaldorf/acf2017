@@ -20,6 +20,31 @@
   }
 }
 
+.panels{
+  div.white{
+    padding: 0 4rem 4rem 4rem;
+  }
+  padding: 0 8.5%;
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction: row;
+  .panel {
+    position: relative;
+    width:50%;
+    box-sizing: border-box;
+    &.copy {
+      padding: 0 4rem 2rem 4rem;
+    }
+    &.img {
+      overflow:hidden;
+      max-height: 400px;
+      img {
+        width:150%;
+      }
+    }
+  }
+}
+
 .play-button{
   text-decoration: none;
   font-weight: 900;
@@ -115,8 +140,23 @@
   }
 }
 
+#team{
+  .auto-grid{
+    img{
+      max-width: 8em;
+      margin-bottom:1em;
+      border-radius: 50%;
+    }
+  }
+}
+
 .wedge {
   height: 30px;
   width: 30px;
   transform: translateX(2rem) rotate(45deg);
+}
+
+.vig-blue{
+  max-width:100%;
+  box-shadow: 0 0 200px @light-blue inset;
 }
