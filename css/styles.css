@@ -183,7 +183,11 @@
 }
 .main-video video {
   object-fit: cover;
-  width: 100%;
+}
+@media only screen and (orientation: portrait) and (min-width: 100px) and (max-width: 800px) {
+  .main-video video {
+    display: none;
+  }
 }
 .main-video:before {
   content: '';
@@ -287,6 +291,7 @@ body {
   font-weight: 500;
   line-height: 1.45;
   color: #000C27;
+  font-size: 18px;
 }
 .courier {
   font-family: serif;
@@ -335,16 +340,16 @@ h1,
 }
 h2,
 .h2 {
-  font-size: 2.827em;
+  font-size: 2.827rem;
   font-weight: 500;
 }
 h3,
 .h3 {
-  font-size: 1.999em;
+  font-size: 1.999rem;
 }
 h4,
 .h4 {
-  font-size: 1.414em;
+  font-size: 1.414rem;
 }
 h5,
 .h5 {
@@ -428,6 +433,11 @@ header {
 header .logo img {
   width: 8rem;
 }
+@media only screen and (orientation: portrait) and (min-width: 100px) and (max-width: 800px) {
+  header {
+    flex-direction: column;
+  }
+}
 #head {
   position: relative;
 }
@@ -474,7 +484,7 @@ section {
   margin-left: 1rem;
 }
 .col-3.media h3 {
-  font-size: 2.827em;
+  font-size: 2.827rem;
   font-weight: 500;
   margin-bottom: 0;
 }
@@ -632,7 +642,7 @@ a.arrow:hover :last-child {
   transform: translateX(3rem) rotateX(175deg);
 }
 .cta a {
-  font-size: 1.999em;
+  font-size: 1.999rem;
   color: #FF6B61;
   text-decoration: none;
   position: relative;
@@ -682,6 +692,19 @@ nav a:active {
 nav a:visited {
   font-weight: 300;
   text-decoration: line-through;
+}
+@media only screen and (orientation: portrait) and (min-width: 100px) and (max-width: 800px) {
+  nav {
+    margin-top: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+  }
+  nav a {
+    margin: 0;
+    margin: .2em;
+  }
 }
 .a-hover {
   color: #FF6B61;
