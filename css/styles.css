@@ -53,7 +53,7 @@
   background-size: 50%;
 }
 .bg-nyc-1 h3 {
-  transform: translateX(-0.5rem);
+  font-weight: 900;
 }
 .bg-nyc-1 h2 {
   border-bottom: none;
@@ -135,7 +135,7 @@
 .panels div.white {
   padding: 0 4rem 4rem 4rem;
 }
-@media screen and (min-width: 100px) and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .panels div.white {
     padding: 8.5%;
   }
@@ -155,7 +155,7 @@
 .panels .panel.img img {
   width: 150%;
 }
-@media screen and (min-width: 801px) and (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .panels {
     flex-direction: column;
     padding: 0;
@@ -199,7 +199,7 @@
   overflow: hidden;
   z-index: -1;
 }
-@media screen and (min-width: 100px) and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .main-video {
     height: 100%;
   }
@@ -270,7 +270,7 @@
   bottom: -10%;
   right: 20%;
 }
-@media screen and (min-width: 100px) and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .map {
     background: none;
   }
@@ -385,7 +385,7 @@ h1,
   margin-top: 0;
   font-size: 3.998rem;
 }
-@media screen and (min-width: 100px) and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   h1,
   .h1 {
     font-size: 2.998rem;
@@ -396,7 +396,7 @@ h2,
   font-size: 2.827rem;
   font-weight: 500;
 }
-@media screen and (min-width: 100px) and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   h2,
   .h2 {
     font-size: 1.827rem;
@@ -492,7 +492,7 @@ header {
 header .logo img {
   width: 8rem;
 }
-@media screen and (min-width: 100px) and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   header {
     align-items: flex-start;
     flex-direction: column;
@@ -552,7 +552,7 @@ section {
   font-weight: 500;
   margin-bottom: 0;
 }
-@media screen and (min-width: 100px) and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .col-3.media h3 {
     font-size: 1.827rem;
   }
@@ -560,7 +560,7 @@ section {
 .col-3.media p {
   margin-top: .15rem;
 }
-@media screen and (min-width: 100px) and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .col-3.media {
     flex-basis: 100%;
   }
@@ -569,7 +569,7 @@ section {
   width: 40%;
   padding: 1rem 2rem;
 }
-@media screen and (min-width: 100px) and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .col-2 {
     width: 100%;
   }
@@ -583,7 +583,7 @@ section {
 .auto-grid.start {
   justify-content: flex-start;
 }
-@media screen and (min-width: 100px) and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .auto-grid {
     justify-content: space-around;
   }
@@ -596,7 +596,7 @@ section {
   padding: 1rem 2rem;
   position: relative;
 }
-@media screen and (min-width: 100px) and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .auto-grid li {
     flex-basis: 100%;
     margin-bottom: 2rem;
@@ -634,7 +634,7 @@ section {
 .grid ul.start {
   justify-content: flex-start;
 }
-@media screen and (min-width: 100px) and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .grid ul {
     justify-content: space-around;
   }
@@ -647,7 +647,7 @@ section {
   padding: 1rem 2rem;
   position: relative;
 }
-@media screen and (min-width: 100px) and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .grid ul li {
     flex-basis: 100%;
     margin-bottom: 2rem;
@@ -724,7 +724,7 @@ footer {
 footer.thin {
   padding-bottom: 2rem;
 }
-@media screen and (min-width: 100px) and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   footer {
     flex-direction: column;
   }
@@ -801,7 +801,7 @@ nav a:visited {
   font-weight: 300;
   text-decoration: line-through;
 }
-@media screen and (min-width: 100px) and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   nav {
     margin-top: 3rem;
     text-align: center;
