@@ -12,7 +12,12 @@ header {
     img {width: 8rem;}
   }
   @media @mobile {
+    align-items: flex-start;
     flex-direction: column;
+    padding: 4rem 8.5% 2rem;
+    .logo {
+      img {width: 12rem;}
+    }
   }
 }
 
@@ -74,12 +79,18 @@ section {
       margin-bottom: 0;
     }
     p {margin-top: .15rem;}
+    @media @mobile {
+      flex-basis: 100%;
+    }
   }
 }
 
 .col-2 {
   width: 40%;
   padding: 1rem 2rem;
+  @media @mobile {
+    width: 100%;
+  }
 }
 
 .auto-grid {
@@ -90,6 +101,9 @@ section {
   &.start{
     justify-content: flex-start;
   }
+  @media @mobile {
+    justify-content: space-around;
+  }
   li {
     // padding: 1rem 2rem;
     min-width: 15rem;
@@ -97,6 +111,10 @@ section {
     div.quote {
       padding: 1rem 2rem;
       position:relative;
+    }
+    @media @mobile {
+      flex-basis: 100%;
+      margin-bottom: 2rem;
     }
     .quote:before{
       content:'"';
@@ -160,4 +178,7 @@ footer{
   .thin;
   .dark-blue;
   .font-small;
+  @media @mobile {
+    flex-direction: column;
+  }
 }

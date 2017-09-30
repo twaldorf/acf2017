@@ -23,6 +23,9 @@
 .panels{
   div.white{
     padding: 0 4rem 4rem 4rem;
+    @media @mobile {
+      padding: 8.5%;
+    }
   }
   padding: 0 8.5%;
   display: flex;
@@ -40,6 +43,16 @@
       max-height: 400px;
       img {
         width:150%;
+      }
+    }
+  }
+  @media @tablet {
+    flex-direction: column;
+    padding: 0;
+    .panel {
+      width:100%;
+      &.copy{
+        padding: 0 8.5% 2rem 8.5%;
       }
     }
   }
@@ -75,11 +88,17 @@
   top: 0;
   overflow: hidden;
   z-index: -1;
+  @media @mobile {
+    height: 100%;
+    // left: -260%;
+  }
   video {
     object-fit: cover;
     // width:100%;
-    @media @mobile {
-      display:none;
+    @media screen and (min-width: 100px) and (max-width: 800px) {
+      height: 100%;
+      // display:none;
+      left: -260%;
     }
   }
 }
@@ -140,6 +159,24 @@
   :nth-child(9) {
     bottom: -10%;
     right: 20%;
+  }
+  @media @mobile {
+    .program-label {
+      position: relative;
+      display: block;
+      top: 0;
+      left:0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      margin: 1rem 0;
+      padding: 1rem 0;
+      height: auto;
+    }
+    background:none;
+    img {
+      display:none;
+    }
   }
 }
 
