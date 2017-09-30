@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 .transparent {
   opacity: .75;
 }
@@ -330,7 +331,7 @@
   z-index: 0;
 }
 body {
-  font-family: Museo Sans, 'sans-serif';
+  font-family: 'Roboto', 'Museo Sans', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 500;
   line-height: 1.45;
   color: #000C27;
@@ -621,6 +622,7 @@ section {
 }
 .auto-grid.secondary li {
   margin-top: 4em;
+  max-width: 20%;
 }
 .grid ul {
   display: flex;
@@ -671,6 +673,7 @@ section {
 }
 .grid ul.secondary li {
   margin-top: 4em;
+  max-width: 20%;
 }
 .grid ul h1,
 .grid ul h2,
