@@ -330,7 +330,7 @@
   z-index: 0;
 }
 body {
-  font-family: 'Museo Sans', 'Helvetica', 'Arial', 'sans-serif';
+  font-family: 'museo-sans', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 500;
   line-height: 1.45;
   color: #000C27;
