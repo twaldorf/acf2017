@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
 .transparent {
   opacity: .75;
 }
@@ -331,7 +330,7 @@
   z-index: 0;
 }
 body {
-  font-family: 'Roboto', 'Museo Sans', 'Helvetica', 'Arial', 'sans-serif';
+  font-family: 'Museo Sans', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 500;
   line-height: 1.45;
   color: #000C27;
