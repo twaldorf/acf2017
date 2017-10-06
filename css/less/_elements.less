@@ -58,6 +58,17 @@
   }
 }
 
+.panel&.img&:not(.clean)::after{
+  content: '';
+  position: absolute;
+  background: rgba(255, 107, 97, 0.36);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow:hidden;
+}
+
 .play-button{
   text-decoration: none;
   font-weight: 900;
