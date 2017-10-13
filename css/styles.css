@@ -787,10 +787,6 @@ footer.thin {
   font-weight: 500;
   font-size: .3em;
 }
-.white a {
-  color: white;
-  fill: white;
-}
 .blue a {
   transition: all ease .43s;
   color: #134ecc;
@@ -815,6 +811,10 @@ footer.thin {
 .blue a:visited {
   font-weight: 300;
   text-decoration: line-through;
+}
+.white a {
+  color: white;
+  fill: white;
 }
 .clean {
   text-decoration: none;
