@@ -98,27 +98,24 @@
 }
 
 .main-video {
-  width:100%;
+  z-index: -1;
   position: absolute;
   top: 0;
-  overflow: hidden;
-  z-index: -1;
+  width:83%;
   @media @mobile {
-    height: 100%;
-    // left: -260%;
+  }
+  .video-container {
+    overflow: hidden;
   }
   video {
-    object-fit: cover;
-    // width:100%;
     @media screen and (min-width: 100px) and (max-width: 800px) {
-      height: 100%;
-      // display:none;
-      left: -260%;
     }
   }
 }
 
-.main-video:before{
+.pr{position:relative}
+
+.video-container:before{
   content: '';
   position: absolute;
   background: rgba(30, 54, 125, 0.5);

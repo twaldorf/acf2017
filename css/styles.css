@@ -209,27 +209,18 @@
   margin-bottom: 0;
 }
 .main-video {
-  width: 100%;
+  z-index: -1;
   position: absolute;
   top: 0;
+  width: 83%;
+}
+.main-video .video-container {
   overflow: hidden;
-  z-index: -1;
 }
-@media screen and (max-width: 800px) {
-  .main-video {
-    height: 100%;
-  }
+.pr {
+  position: relative;
 }
-.main-video video {
-  object-fit: cover;
-}
-@media screen and (min-width: 100px) and (max-width: 800px) {
-  .main-video video {
-    height: 100%;
-    left: -260%;
-  }
-}
-.main-video:before {
+.video-container:before {
   content: '';
   position: absolute;
   background: rgba(30, 54, 125, 0.5);
@@ -566,9 +557,6 @@ header .logo img {
 #head {
   position: relative;
   min-height: 600px;
-}
-.main-content-top {
-  z-index: 2;
 }
 .fix-top {
   position: fixed;
