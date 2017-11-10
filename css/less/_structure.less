@@ -87,11 +87,15 @@ section {
   justify-content: space-between;
   &.start{
     justify-content: flex-start;
+    li:not(:first-of-type){
+      margin-left: 3rem;
+    }
   }
   @media @mobile {
     justify-content: space-around;
   }
   li {
+    min-width: 28%;
     flex-basis: 28%;
     div.quote {
       padding: 1rem 2rem;

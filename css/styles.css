@@ -217,9 +217,6 @@
 .main-video .video-container {
   overflow: hidden;
 }
-.pr {
-  position: relative;
-}
 .video-container:before {
   content: '';
   position: absolute;
@@ -488,6 +485,17 @@ small,
 #media h1 {
   margin-top: 1.114em;
 }
+#team .grid li p {
+  font-size: 1rem;
+}
+#team .grid li span:first-of-type:not(.expand) {
+  font-size: 1.414rem;
+}
+#team .grid li span:nth-of-type(2) {
+  font-size: .8rem;
+  font-weight: 600;
+  margin-top: .4rem;
+}
 .redline {
   margin: 1.414em 0 .5em 0;
   border-bottom: 5px solid #FF6B61;
@@ -497,7 +505,7 @@ small,
   border-bottom: 5px solid #4A90E2;
 }
 .collapsed {
-  height: 9rem;
+  height: 7rem;
   overflow: hidden;
   position: relative;
 }
@@ -640,12 +648,16 @@ section {
 .auto-grid.start {
   justify-content: flex-start;
 }
+.auto-grid.start li:not(:first-of-type) {
+  margin-left: 3rem;
+}
 @media screen and (max-width: 800px) {
   .auto-grid {
     justify-content: space-around;
   }
 }
 .auto-grid li {
+  min-width: 28%;
   flex-basis: 28%;
 }
 .auto-grid li div.quote {
@@ -689,12 +701,16 @@ section {
 .grid ul.start {
   justify-content: flex-start;
 }
+.grid ul.start li:not(:first-of-type) {
+  margin-left: 3rem;
+}
 @media screen and (max-width: 800px) {
   .grid ul {
     justify-content: space-around;
   }
 }
 .grid ul li {
+  min-width: 28%;
   flex-basis: 28%;
 }
 .grid ul li div.quote {
@@ -948,6 +964,9 @@ nav a:visited {
 }
 .p0 {
   padding: 0;
+}
+.pr {
+  position: relative;
 }
 .margin-0-recursive *:not(:first-child) {
   margin: 0 !important;
