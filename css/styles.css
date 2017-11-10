@@ -229,7 +229,7 @@
   bottom: 0;
   left: 0;
 }
-#team .auto-grid img {
+#team .grid img {
   max-width: 8em;
   margin-bottom: 1em;
   border-radius: 50%;
@@ -492,6 +492,23 @@ small,
   margin: 1.414em 0 .5em 0;
   border-bottom: 5px solid #FF6B61;
 }
+.blueline {
+  margin: 1.414em 0 .5em 0;
+  border-bottom: 5px solid #4A90E2;
+}
+.collapsed {
+  height: 9rem;
+  overflow: hidden;
+  position: relative;
+}
+.expand {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5rem 0 0 0;
+  background-image: linear-gradient(to bottom, transparent, white 75%);
+}
 footer a {
   margin: .5rem 1rem;
   color: #134ecc;
@@ -629,8 +646,7 @@ section {
   }
 }
 .auto-grid li {
-  min-width: 15rem;
-  flex-basis: 32%;
+  flex-basis: 28%;
 }
 .auto-grid li div.quote {
   padding: 1rem 2rem;
@@ -669,7 +685,6 @@ section {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  justify-content: flex-start;
 }
 .grid ul.start {
   justify-content: flex-start;
@@ -680,8 +695,7 @@ section {
   }
 }
 .grid ul li {
-  min-width: 15rem;
-  flex-basis: 32%;
+  flex-basis: 28%;
 }
 .grid ul li div.quote {
   padding: 1rem 2rem;
@@ -724,19 +738,14 @@ section {
   margin-top: .4rem;
 }
 .grid ul li {
-  background-color: #134ecc;
-  color: white;
-  fill: white;
-  padding: 1.414em;
-  margin-right: 1em;
+  margin-bottom: 2rem;
 }
-.grid ul li a {
-  color: white;
-  fill: white;
+.grid ul li img {
+  margin-top: 1rem;
 }
 .grid h2 {
   margin: 1.414em 0 .5em 0;
-  border-bottom: 5px solid #FF6B61;
+  border-bottom: 5px solid #4A90E2;
 }
 .grid span {
   font-size: .8rem;
@@ -936,6 +945,9 @@ nav a:visited {
 }
 .db {
   display: block;
+}
+.p0 {
+  padding: 0;
 }
 .margin-0-recursive *:not(:first-child) {
   margin: 0 !important;
