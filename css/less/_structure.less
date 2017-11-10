@@ -93,6 +93,12 @@ section {
   }
   @media @mobile {
     justify-content: space-around;
+    &.start{
+      justify-content: flex-start;
+      li:not(:first-of-type){
+        margin:0;
+      }
+    }
   }
   li {
     min-width: 28%;
@@ -102,6 +108,7 @@ section {
       position:relative;
     }
     @media @mobile {
+      min-width: 100%;
       flex-basis: 100%;
       margin-bottom: 2rem;
     }
@@ -122,12 +129,6 @@ section {
       bottom:-1rem;
       right: 2rem;
       opacity:.4;
-    }
-  }
-  &.secondary {
-    li {
-      margin-top: 4em;
-      max-width: 20%;
     }
   }
 }
