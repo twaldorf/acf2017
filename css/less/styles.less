@@ -4,6 +4,7 @@
 @blue: #134ecc;
 @red: #FF6B61;
 @light-blue: #4A90E2;
+@light-light-blue: #bcd7f6;
 @dark-blue: #000C27;
 @purple: #3C225F;
 
@@ -92,6 +93,22 @@
   );
   background-position: -300px;
   background-size: 200% 100%;
+}
+
+.bg-white-stripe {background:linear-gradient(
+    -65deg
+    , @light-light-blue 0%
+    , @light-light-blue 50%
+    , white 50%
+    , white 100%
+  );
+  background-size: 150% 110%;
+  background-position: -100px;
+  .ts;
+  &:hover {
+    background-size: 150% 110%;
+    background-position: 0px;
+  }
 }
 
 .bg-grad-purp-blue {background:linear-gradient(
