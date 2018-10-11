@@ -299,7 +299,7 @@
 }
 .map :nth-child(2) {
   bottom: 28%;
-  left: 5%;
+  right: 30%;
 }
 .map :nth-child(2):hover {
   z-index: 2;
