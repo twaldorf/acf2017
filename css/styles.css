@@ -298,8 +298,8 @@
   z-index: 2;
 }
 .map :nth-child(2) {
-  bottom: 28%;
-  right: 30%;
+  bottom: 48%;
+  right: 20%;
 }
 .map :nth-child(2):hover {
   z-index: 2;
