@@ -366,6 +366,13 @@
 .map :nth-child(12):hover {
   z-index: 2;
 }
+.map :nth-child(13) {
+  top: 53%;
+  right:22%;
+}
+.map :nth-child(13):hover {
+  z-index: 2;
+}
 @media screen and (max-width: 800px) {
   .map {
     background: none;
