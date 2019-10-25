@@ -873,6 +873,9 @@ nav a:visited {
 .ts.long {
   transition-duration: 1s;
 }
+.long-transition{
+  transition-duration: 1s;
+}
 .hidden {
   display: none;
 }

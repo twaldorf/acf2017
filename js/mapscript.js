@@ -7,17 +7,17 @@ var placeholder = document.getElementById('map-placeholder')
 var programlocations = [
     [75,50],
     [42,80],
-    [60,73],
-    [59,75],
-    [57,73.5],
-    [89,67.5],
-    [105,55],
-    [69,38],
-    [110,80],
-    [70,104],
-    [61,62],
-    [69,20],
-    [69,72]
+    [30,85],
+    [24,87],
+    [24,84],
+    [76,76],
+    [70,53],
+    [40,30],
+    [87,80],
+    [24,92],
+    [28,68],
+    [42,4],
+    [48,84]
 ];
 
 for (let i = 0; i < programs.length; i++) {
@@ -71,6 +71,8 @@ for (let i = 0; i< plabels.length; i++) {
         if (selections[i]) {
             plabels[i].classList.add('node-expand');
             plabels[i].classList.add('program-node-selected');
+            plabels[i].classList.add('long-transition');
+            programs[i].classList.add('long-transition');
         } else {
             plabels[i].classList.remove('node-expand');
             plabels[i].classList.remove('program-node-selected');
