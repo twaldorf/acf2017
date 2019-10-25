@@ -285,7 +285,7 @@
 }
 .map {
   padding:0;
-  min-width: 48%;
+  /* min-width: 48%; */
   position:relative;
 }
 .map-container {
@@ -300,6 +300,11 @@
 }
 .map .col-2 {
   padding: 0;
+}
+@media screen and (max-width: 1290px) {
+  .map-container .row .col-2 {
+    width:100%;
+  }
 }
 body {
   font-family: 'museo-sans', 'Helvetica', 'Arial', 'sans-serif';
