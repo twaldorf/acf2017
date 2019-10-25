@@ -245,153 +245,61 @@
   box-shadow: 0 0 200px #4A90E2 inset;
 }
 .program-label {
-  width: 8rem;
-  height: 4rem;
-  background-color: #4A90E2;
-  opacity: .9;
-  position: absolute;
-  font-size: 1rem;
-  padding-top: 1.2rem;
+  margin-top: 1.2rem;
 }
-.program-label h5,
-.program-label p {
-  margin: 0;
-}
-.program-label p {
-  font-size: .8rem;
-}
-.program-label::after {
-  content: '';
+.program-label-frame {
   border: 1px solid white;
-  width: 100%;
-  height: 100%;
+}
+
+/* program label and preview node rewrites, at this point we have abandoned all decency in css formatting */
+.program-node::before {
+  content:'\25CF';
   position: absolute;
-  left: .1rem;
-  top: .1rem;
-  z-index: 0;
+  top: -10px;
+  left: 7px;
+  transition: all .05s;
+  font-size: 2.2rem;
+}
+.program-node-selected::before {
+  font-size: 4em;
+  content:'\25CF';
+  position: absolute;
+  top: -28px;
+  left: 6px;
+}
+.program-node {
+  position: absolute;
+  width:15px;
+  height:15px;
+  padding: 10px;
+  border-radius: 50%;
+  border: 1px solid white;
+  transition: all .05s;
+}
+.node-expand {
+  margin-left:-10px;
+  margin-top:-10px;
+  border: 3px solid white;
+  height:35px;
+  width:35px;
 }
 .map {
-  background-image: url('../img/map-2.svg');
-  background-size: 80%;
-  background-position: center bottom, center;
-  background-repeat: no-repeat;
+  padding:0;
+  min-width: 48%;
+  position:relative;
+}
+.map-container {
   position: relative;
-  text-align: center;
 }
-.map img {
-  max-width: 80%;
+.node-container {
+  position:relative;
+  min-width:fit-content;
 }
-.map :nth-child(1) {
-  bottom: 18%;
-  right: 50%;
+.map-container .row {
+  justify-content: flex-start;
 }
-.map :nth-child(1):hover {
-  z-index: 2;
-}
-.map :nth-child(2) {
-  bottom: 48%;
-  right: 20%;
-}
-.map :nth-child(2):hover {
-  z-index: 2;
-}
-.map :nth-child(3) {
-  top: 42%;
-  right: 8%;
-}
-.map :nth-child(3):hover {
-  z-index: 2;
-}
-.map :nth-child(4) {
-  top: 10%;
-  right: 5%;
-}
-.map :nth-child(4):hover {
-  z-index: 2;
-}
-.map :nth-child(5) {
-  top: 15%;
-  right: 20%;
-}
-.map :nth-child(5):hover {
-  z-index: 2;
-}
-.map :nth-child(6) {
-  bottom: 10%;
-  right: 15%;
-}
-.map :nth-child(6):hover {
-  z-index: 2;
-}
-.map :nth-child(7) {
-  bottom: -5%;
-  left: 45%;
-  height: 5.5rem;
-}
-.map :nth-child(7):hover {
-  z-index: 2;
-}
-.map :nth-child(8) {
-  bottom: 50%;
-  left: 30%;
-}
-.map :nth-child(8):hover {
-  z-index: 2;
-}
-.map :nth-child(9) {
-  bottom: -10%;
-  right: 20%;
-}
-.map :nth-child(9):hover {
-  z-index: 2;
-}
-.map :nth-child(10) {
-  top: 30%;
-  right: -6%;
-}
-.map :nth-child(10):hover {
-  z-index: 2;
-}
-.map :nth-child(11) {
-  top: 30%;
-  right: 35%;
-}
-.map :nth-child(11):hover {
-  z-index: 2;
-}
-.map :nth-child(12) {
-  top: 43%;
-  left: 1%;
-}
-.map :nth-child(12):hover {
-  z-index: 2;
-}
-.map :nth-child(13) {
-  top: 53%;
-  right:22%;
-}
-.map :nth-child(13):hover {
-  z-index: 2;
-}
-@media screen and (max-width: 800px) {
-  .map {
-    background: none;
-  }
-  .map .program-label {
-    position: relative;
-    display: block;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    margin: 1rem 0;
-    padding: 1rem 0;
-    height: auto;
-  }
-  .map img {
-    display: none;
-  }
+.map .col-2 {
+  padding: 0;
 }
 body {
   font-family: 'museo-sans', 'Helvetica', 'Arial', 'sans-serif';
@@ -482,9 +390,9 @@ h5,
   font-weight: 600;
   margin-top: .4rem;
 }
-figure {
+/* figure {
   font-size: 1.999em;
-}
+} */
 small,
 .font-small {
   font-size: 0.707em;
@@ -963,6 +871,9 @@ nav a:visited {
   transition: all ease .43s;
 }
 .ts.long {
+  transition-duration: 1s;
+}
+.long-transition{
   transition-duration: 1s;
 }
 .hidden {
