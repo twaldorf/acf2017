@@ -17,7 +17,8 @@ var programlocations = [
     [24,92],
     [28,68],
     [42,4],
-    [48,84]
+    [48,84],
+    [71,79]
 ];
 
 for (let i = 0; i < programs.length; i++) {
