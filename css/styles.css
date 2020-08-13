@@ -616,7 +616,7 @@ section {
   content: '"';
   font-size: 5rem;
   position: absolute;
-  font-color: white;
+  color: white;
   top: 0rem;
   left: 1rem;
   opacity: .4;
@@ -625,7 +625,7 @@ section {
   content: '"';
   font-size: 3rem;
   position: absolute;
-  font-color: white;
+  color: white;
   bottom: -1rem;
   right: 2rem;
   opacity: .4;
@@ -638,6 +638,12 @@ section {
 }
 .grid ul.start {
   justify-content: flex-start;
+}
+#team .grid ul.start {
+  justify-content: space-between;
+}
+#team .grid ul li {
+  margin: 0 0 2rem 0;
 }
 .grid ul.start li:not(:first-of-type) {
   margin-left: 3rem;
