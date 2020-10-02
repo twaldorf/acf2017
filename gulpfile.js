@@ -15,7 +15,7 @@ gulp.task('watch', function() {
     console.log('watching!');
 });
 
-gulp.task('default', ['css','watch'])
+// gulp.task('default', ['css','watch'])
 
 gulp.task('deploy', function () {
   return gulp.src("./dist/**/*")
