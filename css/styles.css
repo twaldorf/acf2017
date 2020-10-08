@@ -737,6 +737,8 @@ footer {
   background-color: white;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   padding: 2rem 8.5% 6rem;
   padding-bottom: 2rem;
   color: #000C27;
@@ -745,9 +747,24 @@ footer {
 footer.thin {
   padding-bottom: 2rem;
 }
+
+footer #infinitecraft a, #infinitecraft p {
+  margin: 0;
+  width:unset;
+  height:unset;
+}
+
 @media screen and (max-width: 800px) {
   footer {
     flex-direction: column;
+    align-items: unset;
+    /* justify-content: space-around; */
+  }
+  footer a {
+    display: block;
+  }
+  footer #infinitecraft {
+    margin: 1rem 1rem;
   }
 }
 .logo a {
